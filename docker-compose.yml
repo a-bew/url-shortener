@@ -17,13 +17,3 @@ services:
       dockerfile: ./cra/Dockerfile
     ports:
       - "3000:3000"
-    # networks:
-    #   - frontend
-    # links:
-    #   - "api"
-
-  # networks:
-  #   frontend:
-  #     driver: bridge
-  #   backend:
-  #     driver: bridge
