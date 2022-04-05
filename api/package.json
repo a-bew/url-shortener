@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "NODE_ENV=production nodemon index.js",
     "babel-node": "babel-node --presets='@babel/preset-env'",
-    "dev": "nodemon --exec npm run babel-node -- ./",
-    "test": "jest"
+    "dev": "NODE_ENV=development nodemon --exec npm run babel-node -- ./",
+    "test": "NODE_ENV=test jest --runInBand --detectOpenHandles --forceExit"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
