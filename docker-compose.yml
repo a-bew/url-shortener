@@ -7,6 +7,11 @@ services:
       dockerfile: ./api/Dockerfile
     ports:
       - "8000:8000"
+    environment:
+      - PORT:8000
+    volumes:
+      - .:/api
+      - api_node_modules:/api/node_modules
     # networks:
     #   - backend
 
@@ -17,3 +22,6 @@ services:
       dockerfile: ./cra/Dockerfile
     ports:
       - "3000:3000"
+
+volumes:
+  api_node_modules:
